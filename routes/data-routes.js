@@ -6,6 +6,9 @@ router.post("/api", (req, res) => {
   res.json(req.body);
 });
 
-router.post("/api/test", (req, res) => {});
+router.post("/api/test/:fname", (req, res) => {
+  console.log(req.params);
+  res.json(req.params);
+});
 
 module.exports = router;
